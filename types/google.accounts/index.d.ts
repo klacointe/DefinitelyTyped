@@ -655,6 +655,24 @@ declare namespace google.accounts {
              * sign-in flow between your website and Google. Defaults to false.
              */
             use_fedcm_for_prompt?: boolean;
+
+            /**
+             * Allow to activate redirect_uri validation before January 6, 2025 library update.
+             *
+             * Email received from google:
+             *
+             * [Action Required] Update your Sign in with Google button configuration by
+January 6, 2025
+             * tldr;
+             * To verify your update:
+             *  You can manually enable the new flow before January 6, 2025 by setting the
+             *  optional flag to true when initializing Sign in with Google library.
+             *
+             *  - For JavaScript, set enable_redirect_uri_validation: true in IdConfiguration.
+             *
+             *  - For HTML, set data-enable_redirect_uri_validation=”true” in g_id_onload.
+             */
+            enable_redirect_uri_validation?: boolean;
         }
 
         interface PromptMomentNotification {
